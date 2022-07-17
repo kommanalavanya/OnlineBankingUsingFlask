@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+     .h-100{
+			background-color:rgb(128, 133, 135) ;
+		}
+  </style>
+	<meta charset="utf-8">
+	<meta name="author" content="Muhamad Nauval Azhar">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="This is a login page template based on Bootstrap 5">
+	<title>Bootstrap 5 Login Page</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      
+    <!-- container for responsiveness -->
+    <div class="container-fluid">
+
+      <!-- first item: brand name -->
+      <a class="navbar-brand" href="#">
+        <i class="fa fa-bank" style="font-size:24px"></i>Online banking</a>
+
+      <!-- this is the button when it collapses due to small screen size (data-bs-target must match the ID of the div below)-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- this div holds everything who is going to collapse inside the button (be careful with the ID. It must match with the button target) -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- this list contains the "menu options (items)" such as download, contact, pricing, etc. -->
+        <ul id="my-ul" class="ms-auto navbar-nav">
+          
+          <!-- this is an item -->
+          <li class="nav-item">
+            <a class="nav-link" href="UserReg">AddCustomer</a>
+          </li>
+          <!-- this is another item -->
+          <li class="nav-item">
+            <a class="nav-link" href="viewcustomer">View Customer</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="viewtransactions">View Transaction</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="adminLogin">Logout</a>
+          </li>             
+        
+        </ul>
+      
+      </div>
+    
+    </div>
+
+  </nav>
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-sm-center h-100">
+				<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+					<div class="text-center my-5">
+					
+					</div>
+					<div class="card shadow-lg">
+						<div class="card-body p-5">
+							<h1 class="fs-4 card-title fw-bold mb-4">Registeration Form</h1>
+							<form action="userRegDB" method="post">
+                <div class="mb-3">
+                  <label class="mb-2 text-muted" for="name">Customer Name</label>
+									<input id="name" type="text" class="form-control" name="name"  required autofocus>
+									
+									</div>
+								<div class="mb-3">
+                  <label class="mb-2 text-muted" for="mail">E-Mail Address</label>
+									<input id="email" type="email" class="form-control" name="mail"  required autofocus>
+									<div class="invalid-feedback">
+										Email is invalid
+									</div>
+								</div>
+                <div class="mb-3">
+                  <label class="mb-2 text-muted" for="contact">Contact</label>
+									<input id="contact" type="text" class="form-control" name="contact" required autofocus>
+									
+									</div>
+                  <div class="mb-3">
+                    <label class="mb-2 text-muted" for="address">Address</label>
+                    <input id="address" type="text" class="form-control" name="address" required autofocus>
+                    
+                    </div>
+                    <div class="mb-3">
+                      <label class="mb-2 text-muted" for="bal">Balance</label>
+                      <input id="bal" type="text" class="form-control" name="bal" required autofocus>
+                      
+                      </div>
+
+								
+
+								<div class="d-flex align-items-center">
+								<center>
+									<button type="submit" class="btn btn-primary ms-auto">
+									Register
+                </center>
+									</button>
+								</div>
+							</form>
+						</div>
+					
+					</div>
+					<div class="text-center mt-5 text-muted">
+						Copyright &copy; 2022 &mdash; Jobiak
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+  <center>
+  <strong style="color: rgb(11, 233, 66);font-size: 30px;padding-left: 40px;">{{res}}</strong>
+</center>
+	<script src="js/login.js"></script>
+</body>
+</html>
